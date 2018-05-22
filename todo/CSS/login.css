@@ -1,0 +1,45 @@
+table {
+    top: 200px;
+    margin-top: 50px;
+    color: brown;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+    border: solid 2px chartreuse;
+    background-color: burlywood;
+}
+
+input:hover {
+    background-color: darkgrey;
+}
+
+input {
+    font-size: 1em;
+    color: brown;
+}
+.logout{
+    float: right;
+    margin-top :-250px;
+    margin-right: 130px;
+}
+.logout_2{
+    float: right;
+    margin-top :-300px;
+    margin-right: 130px;
+}
+table:hover{
+    background-color: khaki;
+}
+h1{
+    /* display: inline; */
+    text-align: center;
+    font-size: 3em;
+
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+wrong{
+    background-color: red;
+}

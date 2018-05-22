@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <title>Fill Details</title>
+    <link rel="stylesheet" type="text/css" href="login.css"></link>
+</head>
+
+<body>
+    <form method="post" action="fill.php">
+        <table>
+            <tr>
+                <th>
+                    <lable>Registration Number</label>
+                </th>
+                <td>
+                    <input type="text" name="register_no" pattern="[0-9]{12}"required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <lable>10th Percentage</label>
+                </th>
+                <td>
+                    <input type="text" name="tenth_per_cent" max="100" min="0" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <lable>12th Percentage</label>
+                </th>
+                <td>
+                    <input type="text" name="twelfth_per_cent" max="100" min="0" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <lable>UG CGPA</label>
+                </th>
+                <td>
+                    <input type="text" name="ug_cgpa" max="10" min="4" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <lable>College Name</label>
+                </th>
+                <td>
+                    <input type="text" name="college_name" required>
+                </td>
+            </tr>
+            <tr>
+                    <th>
+                        
+                    </th>
+                    <td>
+                        <input type="submit" name="submit" value="submit">
+                    </td>
+                </tr>
+        </table>
+    </form>
+    <form method="post" action="logout.php" class="logout_2">
+            <input type="submit" name="logout" value="Logout">
+           </form>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /project/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+<FilesMatch "\.(php)$">
+   <IfModule mod_headers.c>   
+     Header set Access-Control-Allow-Origin "*"
+   </IfModule>
+</FilesMatch>

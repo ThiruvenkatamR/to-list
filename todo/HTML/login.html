@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/todo/CSS/login.css"></link>
+</head>
+<img  src="/todo/logo.png" width="100px" height="100px">
+<h1>TO DO LIST</h1>
+<body>
+    <form method="post" action="../../todo/PHP/login.php">
+        <table>
+            <tr>
+                <th>
+                    <label>Username</label>
+                </th>
+                <td>
+                    <input type="email" name="username" placeholder="username@example.com" autocomplete="off" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>Password</label>
+                </th>
+                <td>
+                    <input type="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" name="login" value="Login"></td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>

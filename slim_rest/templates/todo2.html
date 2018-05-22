@@ -1,0 +1,74 @@
+    {%if session > 0%}
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>To Do List</title>
+        <meta charset="utf-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+        <link rel="stylesheet" type="text/css" href="/css/todo.css"></link>
+
+    </head>
+
+    <body>
+
+        <div class="in">
+            <h1>To Do List</h1>
+            <form action="/tasks/insert" method="post">
+                <input type="text" name="title" id="title" placeholder="Title" title="Enter only text" required>
+                <input type="text" name="description" id="description" row="20" placeholder="Description" title="Enter only text" required>
+                <button name="add" class="add" value="add">Add to List</button>
+            </form>
+            <form method="put"  action="/tasks/logout">
+                <button type="submit" class="logout" value="logout">Logout</button>
+            </form>
+        </div>
+
+            
+      
+
+        <ol id="list">
+            {%for task in tasks %}
+                <li>
+                    <form method="post" action="/tasks/check">
+                        <button name="check" class="check" value="{{task.id}}">&#10004;</button>
+                    </form>
+                    {%if task.checked == 0 %}
+                        <span class="dropdown">
+                    {% else %}
+                        <span class="dropdown line">
+                    {% endif %}
+                            {{task.title}}
+                                <span class="dropdown-content">
+                                    Description:{{task.description}}
+                                </span>
+                        </span>
+                        <form method="post" action="/tasks/delete">
+                            <button name="remove" class="remove" value="{{task.id}}"> &#10006;</button>
+                        </form>
+                        <button name="remove" class="edit_btn" value="{{task.id}}"> Edit</button>
+                        <br>
+                        <div class="edit">
+                            <form action="/tasks/edit" method="post">
+                                <input type="text" name="edit_title" placeholder="Title" required>
+                                <input type="description" name="edit_desc" placeholder="Description" required>
+                                <input type="hidden" name="id" value="{{task.id}}">
+                                <input type="submit" name="save" value="Save">
+                            </form>
+                        </div>
+                </li>
+                {% endfor %}
+
+        </ol>
+
+
+
+    </body>
+    <script src="/js/todo.js"> </script>
+    </html>
+    {%else%}
+    <script>
+        window.location = '/';
+    </script>
+    {%endif%}
