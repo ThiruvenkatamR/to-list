@@ -1,0 +1,11 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="publish-message" xsi:type="object">Thiru\Queue\Console\MessagePublishCommand</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Thiru\Queue\Api\MessageInterface" type="Thiru\Queue\Model\Message" />
+</config>
+
