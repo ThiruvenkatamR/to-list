@@ -13,5 +13,9 @@ interface MessageInterface
      * @return string
      */
     public function getMessage();
+
     public function thiru();
+
+    public function ranga();
+
 }
